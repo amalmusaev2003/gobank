@@ -33,9 +33,10 @@ type APIServer struct {
 	listenAddr string
 }
 
-func NewAPIServer(listenAddr string) *APIServer {
+func NewAPIServer(listenAddr string, storage Storage) *APIServer {
 	return &APIServer{
 		listenAddr: listenAddr,
+		storage: storage,
 	}
 }
 
